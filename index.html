@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAINMAXVISUEL</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PAGE INSCRIPTION -->
+<div id="page-inscription" class="page active">
+  <h1>Bienvenue sur GAINMAXVISUEL</h1>
+  <h2>Inscrivez-vous dès maintenant</h2>
+  <form id="form-inscription">
+    <input type="text" id="prenomNom" placeholder="Prénom et Nom" required>
+    <input type="text" id="pays" placeholder="Pays" required>
+    <input type="text" id="codePays" placeholder="Code Pays" required>
+    <input type="text" id="numero" placeholder="Numéro" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Mot de passe" required>
+    <button type="submit">S'inscrire</button>
+  </form>
+  <p>Déjà un compte ? <span id="lien-connexion">Connectez-vous</span></p>
+  <p id="message-inscription" class="message"></p>
+</div>
+
+<!-- PAGE CONNEXION -->
+<div id="page-connexion" class="page">
+  <h1>Connexion</h1>
+  <form id="form-connexion">
+    <input type="text" id="pays-login" placeholder="Pays" required>
+    <input type="text" id="codePays-login" placeholder="Code Pays" required>
+    <input type="text" id="numero-login" placeholder="Numéro" required>
+    <input type="password" id="password-login" placeholder="Mot de passe" required>
+    <button type="submit">Se connecter</button>
+  </form>
+  <p id="lien-inscription">Pas encore de compte ? Inscrivez-vous</p>
+  <p id="message-connexion" class="message"></p>
+</div>
+
+<!-- PAGE ACCUEIL -->
+<div id="page-accueil" class="page">
+  <h1>Accueil</h1>
+  <div class="actions">
+    <button id="btn-recharge">Recharger</button>
+    <button id="btn-retrait">Retirer</button>
+    <button id="btn-conditions">Conditions</button>
+  </div>
+</div>
+
+<!-- PAGE RECHARGE -->
+<div id="page-recharge" class="page">
+  <h2>Recharge</h2>
+  <label>Montant :</label>
+  <select id="select-montant"></select>
+  <label>Pays :</label>
+  <select id="select-pays"></select>
+  <label>Opérateur :</label>
+  <select id="select-operateur">
+    <option value="orange">Orange Money</option>
+  </select>
+  <button id="btn-recharge-suivant">Continuer</button>
+  <button class="btn-retour">Retour</button>
+</div>
+
+<!-- PAGE RECHARGE CONFIRM -->
+<div id="page-recharge-confirm" class="page">
+  <h2>Veuillez composer votre code OTP</h2>
+  <p id="message-otp"></p>
+  <input type="text" id="numero-otp" placeholder="Votre numéro" required>
+  <input type="text" id="otp-code" placeholder="Code OTP" required>
+  <button id="btn-otp-confirmer">Confirmer</button>
+  <button class="btn-retour">Retour</button>
+  <p id="message-recharge" class="message"></p>
+</div>
+
+<!-- PAGE RETRAIT -->
+<div id="page-retrait" class="page">
+  <h2>Retrait</h2>
+  <p>Le retrait minimum est 500</p>
+  <input type="text" id="retrait-numero" placeholder="Numéro" required>
+  <input type="number" id="retrait-montant" placeholder="Montant" required>
+  <input type="text" id="retrait-codepays" placeholder="Code Pays" required>
+  <select id="retrait-operateur">
+    <option value="orange">Orange Money</option>
+  </select>
+  <button id="btn-retrait-demander">Demander retrait</button>
+  <button class="btn-retour">Retour</button>
+  <p id="message-retrait" class="message"></p>
+</div>
+
+<!-- PAGE PLAN -->
+<div id="page-plan" class="page">
+  <h2>Plans d'investissement</h2>
+  <div id="plans-container"></div>
+  <button class="btn-retour">Retour</button>
+</div>
+
+<!-- PAGE PARTAGER -->
+<div id="page-partager" class="page">
+  <h2>Partager votre code parrainage</h2>
+  <input type="text" id="code-parrain" readonly>
+  <button id="btn-copier-parrain">Copier</button>
+  <button class="btn-retour">Retour</button>
+</div>
+
+<!-- PAGE MOI -->
+<div id="page-moi" class="page">
+  <h2>Moi</h2>
+  <button id="btn-historique">Historique</button>
+  <button id="btn-macommande">Ma commande</button>
+  <button class="btn-retour">Retour</button>
+</div>
+
+<!-- PAGE HISTORIQUE -->
+<div id="page-historique" class="page">
+  <h2>Historique</h2>
+  <div id="historique-container"></div>
+  <button class="btn-retour">Retour</button>
+</div>
+
+<!-- PAGE MA COMMANDE -->
+<div id="page-macommande" class="page">
+  <h2>Ma commande</h2>
+  <div id="macommande-container"></div>
+  <button class="btn-retour">Retour</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

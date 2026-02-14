@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+}
+
+.page { display: none; padding: 20px; }
+.page.active { display: block; }
+
+h1, h2 { text-align: center; color: #333; }
+
+input, select, button {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover { background-color: #218838; }
+
+.btn-retour {
+  background-color: #007bff;
+}
+
+.btn-retour:hover { background-color: #0069d9; }
+
+.actions button {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+#plans-container, #historique-container, #macommande-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.plan, .historique-item, .commande-item {
+  border: 2px solid #28a745;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  background-color: #fff;
+}
+
+.message { color: red; text-align: center; margin-top: 10px; }
